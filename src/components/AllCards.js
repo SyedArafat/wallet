@@ -1,8 +1,10 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Pagination } from 'swiper/modules';
 
-// Array of card data
 const cards = [
     {
         id: 1,
@@ -48,10 +50,13 @@ function AllCards() {
                     <a href="cards.html">See all</a>
                 </div>
                 <Swiper
-                    spaceBetween={30}
-                    slidesPerView={1}
-                    loop={true}
-                    className="card-slider">
+                    spaceBetween={10}  // Adjust the space between slides
+                    slidesPerView={1}  // Show a portion of the next slide
+                    loop={true}  // Enable looping
+                    pagination={{ clickable: true }}  // Add pagination dots
+                    modules={[Pagination]}
+                    className="card-slider"
+                >
                     {cards.map((card) => (
                         <SwiperSlide key={card.id}>
                             <div className={`credit-card-box ${card.colorClass}`}>

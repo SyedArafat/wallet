@@ -6,13 +6,15 @@ import AccountSection from "./components/AccountSection";
 import CardSummary from "./components/CardSummary";
 import CategoriesSection from "./components/CategoriesSection";
 import TransactionSection from "./components/TransactionSection";
-import ServiceSection from "./components/ServiceSection";
 import TopExpenses from "./components/TopExpenses";
+import AllCards from "./components/AllCards";
+import MonthlyStatistics from "./components/MonthlyStatistics";
+import BottomNavbar from "./components/BottomNavbar";
 // Import other components as needed
 
 function App() {
     useEffect(() => {
-        feather.replace(); // Replace all icons with Feather icons after rendering
+        feather.replace();
     }, []);
     return (
         <div className="App">
@@ -22,8 +24,11 @@ function App() {
             <CardSummary />
             <CategoriesSection />
             <TransactionSection />
-            <ServiceSection />
+            {/*<ServiceSection />*/}
             <TopExpenses />
+            <AllCards />
+            <MonthlyStatistics />
+            <BottomNavbar />
             {/* Add other components */}
         </div>
     );

@@ -5,7 +5,7 @@ const categories = [
     { id: 1, name: "Transfer", icon: "repeat", link: "transfer.html" },
     { id: 2, name: "Bill", icon: "file-text", link: "bill.html" },
     { id: 3, name: "Request", icon: "log-in", link: "request.html" },
-    { id: 4, name: "Withdraw", icon: "bank", link: "withdraw.html" }
+    { id: 4, name: "Withdraw", icon: "briefcase", link: "withdraw.html" }
 ];
 
 function CategoriesSection() {

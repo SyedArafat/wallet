@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import AddMoneyModal from './AddMoneyModal';
+import AddMoneyModal from './Modals/AddMoneyModal';
 
 function CardSummary() {
-    const [showModal, setShowModal] = useState(false);
+    const [, setShowModal] = useState(false);
 
     const handleShowModal = () => setShowModal(true);
 

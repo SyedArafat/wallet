@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 function Sidebar() {
-    const [isDarkMode, setIsDarkMode] = useState(false);
+    const [isDarkMode, setIsDarkMode] = useState(true);
     const handleDarkModeToggle = () => {
         setIsDarkMode((prevMode) => !prevMode); // Toggle state
         document.body.classList.toggle('dark', !isDarkMode); // Add/remove 'dark' class

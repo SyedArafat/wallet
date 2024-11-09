@@ -1,15 +1,12 @@
-import React, { useEffect } from 'react';
+import React, {useEffect} from 'react';
 import feather from 'feather-icons';
-import Sidebar from './components/Sidebar';
-import MainHeader from "./components/MainHeader";
-import AccountSection from "./components/AccountSection";
-import CardSummary from "./components/CardSummary";
-import CategoriesSection from "./components/CategoriesSection";
-import TransactionSection from "./components/TransactionSection";
-import TopExpenses from "./components/TopExpenses";
-import AllCards from "./components/AllCards";
-import MonthlyStatistics from "./components/MonthlyStatistics";
-import BottomNavbar from "./components/BottomNavbar";
+import {Route, Routes} from "react-router-dom";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import {ForcedNoRequireAuth} from "./auth/Auth";
+import Register from "./pages/Register";
+import PrivateOutlet from "./auth/PrivateOutlet";
+
 // Import other components as needed
 
 function App() {
@@ -18,18 +15,29 @@ function App() {
     }, []);
     return (
         <div className="App">
-            <MainHeader />
-            <Sidebar />
-            <AccountSection />
-            <CardSummary />
-            <CategoriesSection />
-            <TransactionSection />
-            {/*<ServiceSection />*/}
-            <TopExpenses />
-            <AllCards />
-            <MonthlyStatistics />
-            <BottomNavbar />
-            {/* Add other components */}
+            <Routes>
+                {/*<Route exact path={"/"} element={<RequireAuth> <Home/> </RequireAuth>} />*/}
+                {/*<Route path={"/logout"} element={<Logout/>} exact/>*/}
+
+                <Route exact path="/login"
+                       element={
+                           <ForcedNoRequireAuth>
+                               <Login/>
+                           </ForcedNoRequireAuth>
+                       }/>/>
+
+                <Route exact path="/register"
+                       element={
+                           <ForcedNoRequireAuth>
+                               <Register />
+                           </ForcedNoRequireAuth>
+                       }/>/>
+                />
+
+                <Route path={"/*"} element={<PrivateOutlet />}>
+                    <Route exact path="" element={<Home/>}/>
+                </Route>
+            </Routes>
         </div>
     );
 }

@@ -1,14 +1,14 @@
 import React from 'react';
-import CategoriesSection from "../components/CategoriesSection";
-import TransactionSection from "../components/TransactionSection";
-import CardSummary from "../components/CardSummary";
-import Sidebar from "../components/Sidebar";
-import MainHeader from "../components/MainHeader";
-import TopExpenses from "../components/TopExpenses";
-import AccountSection from "../components/AccountSection";
-import AllCards from "../components/AllCards";
-import MonthlyStatistics from "../components/MonthlyStatistics";
-import BottomNavbar from "../components/BottomNavbar";
+import CategoriesSection from "../components/Home/CategoriesSection";
+import TransactionSection from "../components/Home/TransactionSection";
+import CardSummary from "../components/Home/CardSummary";
+import Sidebar from "../components/Home/Sidebar";
+import MainHeader from "../components/Home/MainHeader";
+import TopExpenses from "../components/Home/TopExpenses";
+import AccountSection from "../components/Home/AccountSection";
+import AllCards from "../components/Home/AllCards";
+import MonthlyStatistics from "../components/Home/MonthlyStatistics";
+import BottomNavbar from "../components/Home/BottomNavbar";
 
 function Home() {
     return (

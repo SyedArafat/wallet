@@ -1,9 +1,12 @@
 import React from 'react';
+import AuthHeader from "../components/Login/AuthHeader";
+import AuthForm from "../components/Login/AuthForm";
 
 function Login() {
     return (
         <>
-            <h2>Login</h2>
+            <AuthHeader />
+            <AuthForm />
         </>
     );
 }

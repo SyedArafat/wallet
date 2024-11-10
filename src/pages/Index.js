@@ -5,7 +5,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import {Link} from "react-router-dom";
 
-const Onboarding = () => {
+const Index = () => {
     // Create a reference to the swiper instance
     const swiperRef = useRef(null);
 
@@ -244,4 +244,4 @@ const Onboarding = () => {
     );
 };
 
-export default Onboarding;
+export default Index;

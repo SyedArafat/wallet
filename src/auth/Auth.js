@@ -26,7 +26,7 @@ const RequireAuth = ({children}) => {
 }
 
 const ForcedNoRequireAuth = ({children}) => {
-    return Authenticated() === false ? children : <Navigate to="/" replace />;
+    return Authenticated() === false ? children : <Navigate to="/home" replace />;
 }
 
 export {

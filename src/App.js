@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import {ForcedNoRequireAuth} from "./auth/Auth";
 import Register from "./pages/Register";
 import PrivateOutlet from "./auth/PrivateOutlet";
+import ForgetPassword from "./pages/ForgetPassword";
 
 // Import other components as needed
 
@@ -16,9 +17,6 @@ function App() {
     return (
         <div className="App">
             <Routes>
-                {/*<Route exact path={"/"} element={<RequireAuth> <Home/> </RequireAuth>} />*/}
-                {/*<Route path={"/logout"} element={<Logout/>} exact/>*/}
-
                 <Route exact path="/login"
                        element={
                            <ForcedNoRequireAuth>
@@ -30,6 +28,14 @@ function App() {
                        element={
                            <ForcedNoRequireAuth>
                                <Register />
+                           </ForcedNoRequireAuth>
+                       }/>/>
+                />
+
+                <Route exact path="/forgot-password"
+                       element={
+                           <ForcedNoRequireAuth>
+                               <ForgetPassword />
                            </ForcedNoRequireAuth>
                        }/>/>
                 />

@@ -1,7 +1,11 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Link } from 'react-router-dom';
+import feather from "feather-icons";
 
 const AuthHeader = () => {
+    useEffect(() => {
+        feather.replace();
+    }, []);
     return (
         <div className="auth-header">
             <Link to="/index">

@@ -45,7 +45,7 @@ const AuthForm = () => {
                 </div>
 
                 <Link to="/landing" className="btn theme-btn w-100">Sign In</Link>
-                <h4 className="signup">Don’t have an account? <Link to="/signup"> Sign up</Link></h4>
+                <h4 className="signup">Don’t have an account? <Link to="/register"> Sign up</Link></h4>
 
                 <div className="division">
                     <span>OR</span>

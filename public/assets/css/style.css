@@ -126,6 +126,21 @@
     }
 }
 
+/* Position the left arrow in the upper-left corner of the second slide */
+.onboarding-prev {
+    position: absolute;
+    top: 20px; /* Distance from the top */
+    left: 20px; /* Distance from the left */
+    z-index: 10; /* Ensure the arrow is above other content */
+    cursor: pointer;
+}
+
+/*.onboarding-prev img {*/
+/*    width: 30px; !* Set the size of the arrow *!*/
+/*    height: auto;*/
+/*}*/
+
+
 /*========================
     Variable CSS start
 ==========================*/

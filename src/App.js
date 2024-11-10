@@ -7,6 +7,7 @@ import {ForcedNoRequireAuth} from "./auth/Auth";
 import Register from "./pages/Register";
 import PrivateOutlet from "./auth/PrivateOutlet";
 import ForgetPassword from "./pages/ForgetPassword";
+import Landing from "./pages/Landing";
 
 // Import other components as needed
 
@@ -24,10 +25,12 @@ function App() {
                            </ForcedNoRequireAuth>
                        }/>/>
 
+                <Route exact path="/landing" element={<Landing />}/>/>
+
                 <Route exact path="/register"
                        element={
                            <ForcedNoRequireAuth>
-                               <Register />
+                               <Register/>
                            </ForcedNoRequireAuth>
                        }/>/>
                 />
@@ -35,12 +38,12 @@ function App() {
                 <Route exact path="/forgot-password"
                        element={
                            <ForcedNoRequireAuth>
-                               <ForgetPassword />
+                               <ForgetPassword/>
                            </ForcedNoRequireAuth>
                        }/>/>
                 />
 
-                <Route path={"/*"} element={<PrivateOutlet />}>
+                <Route path={"/*"} element={<PrivateOutlet/>}>
                     <Route exact path="" element={<Home/>}/>
                 </Route>
             </Routes>

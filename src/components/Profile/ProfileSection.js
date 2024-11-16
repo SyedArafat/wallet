@@ -67,7 +67,7 @@ function ProfileSection() {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/help" className="profile-box">
+                        <Link to="/help-center" className="profile-box">
                             <div className="profile-img">
                                 <i className="icon" data-feather="help-circle"></i>
                             </div>

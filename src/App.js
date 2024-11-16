@@ -13,6 +13,7 @@ import Cards from "./pages/Cards";
 import ChangePassword from "./pages/ChangePassword";
 import ConfirmPasswordChange from "./pages/ConfirmPasswordChange";
 import SettingPage from "./pages/SettingPage";
+import HelpCenter from "./pages/HelpCenter";
 
 function App() {
     return (
@@ -51,6 +52,7 @@ function App() {
                     <Route exact path="change-password" element={<ChangePassword/>}/>
                     <Route exact path="confirm-password-change" element={<ConfirmPasswordChange/>}/>
                     <Route exact path="settings" element={<SettingPage/>}/>
+                    <Route exact path="help-center" element={<HelpCenter/>}/>
                 </Route>
             </Routes>
         </div>

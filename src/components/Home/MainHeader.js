@@ -1,17 +1,22 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import feather from "feather-icons";
+import {Link} from "react-router-dom";
 
 function Header() {
+    useEffect(() => {
+        feather.replace();
+    }, []);
     return (
         <header className="section-t-space">
             <div className="custom-container">
                 <div className="header-panel">
-                    <a className="sidebar-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft">
+                    <Link className="sidebar-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft">
                         <i className="menu-icon" data-feather="menu"></i>
-                    </a>
+                    </Link>
                     <img className="img-fluid logo" src="/assets/images/logo/logo.png" alt="logo" />
-                    <a href="notification.html" className="notification">
+                    <Link to="notification.html" className="notification">
                         <i className="notification-icon" data-feather="bell"></i>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </header>

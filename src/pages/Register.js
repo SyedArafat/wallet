@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
+import feather from "feather-icons";
 
 const Register = () => {
+    useEffect(() => {
+        feather.replace();
+    }, []);
     const [formData, setFormData] = useState({
         fullName: "",
         email: "",
@@ -28,9 +32,9 @@ const Register = () => {
         <div className="auth-body">
             {/* Header */}
             <div className="auth-header">
-                <a href="signin.html">
+                <Link to="/">
                     <i className="back-btn" data-feather="arrow-left"></i>
-                </a>
+                </Link>
 
                 <img
                     className="img-fluid img"

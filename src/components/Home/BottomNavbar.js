@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 const BottomNavbar = () => {
     return (
@@ -12,46 +13,46 @@ const BottomNavbar = () => {
                 </div>
                 <ul>
                     <li className="active">
-                        <a href="landing.html">
+                        <Link to="/home">
                             <div className="icon">
                                 <img className="unactive" src="assets/images/svg/mpay.svg" alt="mPay"/>
                                 <img className="active" src="assets/images/svg/mpay-fill.svg" alt="mPay"/>
                             </div>
                             <h5 className="active">mPay</h5>
-                        </a>
+                        </Link>
                     </li>
 
                     <li>
-                        <a href="crypto.html">
+                        <Link to="crypto.html">
                             <div className="icon">
                                 <img className="unactive" src="assets/images/svg/bitcoin.svg" alt="categories"/>
                                 <img className="active" src="assets/images/svg/bitcoin-fill.svg" alt="categories"/>
                             </div>
                             <h5>Crypto</h5>
-                        </a>
+                        </Link>
                     </li>
 
                     {/* Placeholder for center button */}
                     <li></li>
 
                     <li>
-                        <a href="insight.html">
+                        <Link to="insight.html">
                             <div className="icon">
                                 <img className="unactive" src="assets/images/svg/bar-chart.svg" alt="bag"/>
                                 <img className="active" src="assets/images/svg/bar-chart-fill.svg" alt="bag"/>
                             </div>
                             <h5>Insight</h5>
-                        </a>
+                        </Link>
                     </li>
 
                     <li>
-                        <a href="profile.html">
+                        <Link to="/profile">
                             <div className="icon">
                                 <img className="unactive" src="assets/images/svg/user.svg" alt="profile"/>
                                 <img className="active" src="assets/images/svg/user-fill.svg" alt="profile"/>
                             </div>
                             <h5>Profile</h5>
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </div>

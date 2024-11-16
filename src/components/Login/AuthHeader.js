@@ -8,7 +8,7 @@ const AuthHeader = () => {
     }, []);
     return (
         <div className="auth-header">
-            <Link to="/index">
+            <Link to="/">
                 <i className="back-btn" data-feather="arrow-left"></i>
             </Link>
             <img className="img-fluid img" src="assets/images/authentication/1.svg" alt="v1" />

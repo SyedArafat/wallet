@@ -1,11 +1,15 @@
-import React, { useEffect, useRef } from 'react';
+import React, {useEffect, useRef} from 'react';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import {Link} from "react-router-dom";
+import feather from "feather-icons";
 
 const Index = () => {
+    useEffect(() => {
+        feather.replace();
+    }, []);
     // Create a reference to the swiper instance
     const swiperRef = useRef(null);
 
@@ -144,19 +148,23 @@ const Index = () => {
 
                             <div className="custom-container">
                                 <p>
-                                    The best payment method connects your money to friends, family, brands, and experiences.
+                                    The best payment method connects your money to friends, family, brands, and
+                                    experiences.
                                 </p>
                                 <div className="d-flex justify-content-between align-items-center pb-3">
-                                    <a href="#" className="btn btn-link mt-0 p-0">
+                                    <Link to="/login" className="btn btn-link mt-0 p-0">
                                         Skip
-                                    </a>
+                                    </Link>
+
 
                                     <div className="onboarding-next" onClick={goToNextSlide}>
-                                        <img
-                                            className="img-fluid arrow"
-                                            src="assets/images/svg/arrow-white.svg"
-                                            alt="arrow"
-                                        />
+                                        <Link to={goToNextSlide}>
+                                            <img
+                                                className="img-fluid arrow"
+                                                src="assets/images/svg/arrow-white.svg"
+                                                alt="arrow"
+                                            />
+                                        </Link>
                                     </div>
                                 </div>
                             </div>

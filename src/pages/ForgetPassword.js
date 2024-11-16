@@ -1,7 +1,13 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
+import feather from "feather-icons";
 
 const ForgetPassword = () => {
+    useEffect(() => {
+        // Replace icons with Feather icons after rendering
+        feather.replace();
+    }, []);
+
     const [emailOrPhone, setEmailOrPhone] = useState("");
 
     const handleChange = (e) => {

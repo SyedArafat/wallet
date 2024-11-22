@@ -1,0 +1,10 @@
+services:
+  app:
+    image: react_wallet_app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/app

@@ -22,7 +22,7 @@ function Sidebar() {
                 <div className="sidebar-content">
                     <ul className="link-section">
                         <li>
-                            <a href="landing.html" className="pages">
+                            <a href="/home" className="pages">
                                 <i className="sidebar-icon" data-feather="credit-card"></i>
                                 <h3>mPay</h3>
                             </a>
@@ -46,7 +46,7 @@ function Sidebar() {
                             </a>
                         </li>
                         <li>
-                            <a href="profile.html" className="pages">
+                            <a href="/profile" className="pages">
                                 <i className="sidebar-icon" data-feather="user"></i>
                                 <h3>Profile</h3>
                             </a>
